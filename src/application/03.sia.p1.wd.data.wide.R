@@ -57,7 +57,7 @@ df_wide_scores <- scores %>%
   )
 
 # * 3 devices df ----
-df_wide_devices <- read_xlsx(p_devices) 
+df_wide_devices <- devices 
 
 # * 4 technical specs (long -> wide) ----
 df_wide_specs <- specs %>%

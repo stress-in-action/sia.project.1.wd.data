@@ -101,3 +101,6 @@ df_shiny_sia_wd_info <- df_wide_sia_wd %>%
 # * 4  Save outputs ----
 saveRDS(df_shiny_sia_wd_filter, here("data", "processed", paste0("df_shiny_sia_wd_filter_", date_suffix, ".rds")))
 saveRDS(df_shiny_sia_wd_info, here("data", "processed", paste0("df_shiny_sia_wd_info_", date_suffix, ".rds")))
+
+#write_xlsx(list(df_shiny_sia_wd_filter = df_shiny_sia_wd_filter), here("data","processed", paste0("df_shiny_sia_wd_filter_", date_suffix, ".xlsx")))
+#write_xlsx(list(df_shiny_sia_wd_info = df_shiny_sia_wd_info), here("data","processed", paste0("df_shiny_sia_wd_info_", date_suffix, ".xlsx")))
