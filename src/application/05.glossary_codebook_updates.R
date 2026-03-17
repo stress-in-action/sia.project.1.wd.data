@@ -468,6 +468,17 @@ saveRDS(df_codebook, file = "df_codebook.rds")
 
 updates <- tagList(
   
+  strong("2026", style = "color:#1c75bc; margin-top: 5px;"),
+  
+  tags$ul(
+    style = "padding-left: 15px;",
+    
+    tags$li(
+      strong(""),
+      ""
+    )
+  ),
+  
   strong("2025", style = "color:#1c75bc; margin-top: 5px;"),
   
   tags$ul(
@@ -491,7 +502,7 @@ updates <- tagList(
     ),
     tags$li(
       strong("June"),
-      " — 54 wearables included in the app."
+      " — 10 wearables included in the app."
     ),
     tags$li(
       strong("May"),
