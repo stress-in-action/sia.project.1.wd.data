@@ -10,6 +10,7 @@ p_specs       <- here("data","raw","technical_specs.xlsx")
 p_data_access <- here("data","raw","data_access.xlsx")
 p_rvu         <- here("data","raw","rvu_synthesis.xlsx")
 p_scores      <- here("data","raw","expert_scores.xlsx")
+p_rvu_synthesis_detailed <- here("data","raw","rvu_synthesis_detailed.xlsx")
 
 #set na values
 na_vals <- c("", "NA", "NP", "N/A", "Na", "na", "NULL", "-9999")
@@ -20,9 +21,10 @@ specs        <- read_xlsx(p_specs,        na = na_vals) %>% clean_names()
 data_access  <- read_xlsx(p_data_access,  na = na_vals) %>% clean_names()
 rvu          <- read_xlsx(p_rvu,          na = na_vals) %>% clean_names()
 scores       <- read_xlsx(p_scores,       na = na_vals) %>% clean_names()
+rvu_detailed  <- read_xlsx(p_rvu_synthesis_detailed, na = na_vals) %>% clean_names()
 
 
-# later: restrict to selected devices only 
+# possibility: restrict to selected devices only 
 
 # DEVICE_FILTER <- c("003_sia_wd_emp", "004_sia_wd_emp")
 # devices      <- devices      %>% dplyr::filter(device_id %in% DEVICE_FILTER)

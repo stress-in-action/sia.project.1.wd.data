@@ -235,6 +235,34 @@ RVU_last_search_date =
   )
 
 # * 4 write final osf df----
-write_xlsx(list(df_osf_sia_wd = df_osf_sia_wd), here("data","processed", paste0("df_osf_sia_wd_", date_suffix, ".xlsx")))
 
-saveRDS(df_osf_sia_wd, here("data", "processed", paste0("df_osf_sia_wd_shiny_", date_suffix, ".rds")))
+# ---- create detailed sheets per device ----
+rvu_tabs <- rvu_detailed %>%
+  split(.$device_id)
+
+# ensure sheet names are valid in Excel (max 31 characters)
+names(rvu_tabs) <- substr(names(rvu_tabs), 1, 31)
+
+# optional: arrange studies nicely
+rvu_tabs <- purrr::map(
+  rvu_tabs,
+  ~ .x %>% arrange(year)
+)
+
+# ---- combine overview + detailed sheets ----
+excel_sheets <- c(
+  list(df_osf_sia_wd = df_osf_sia_wd),
+  rvu_tabs
+)
+
+# ---- write Excel with multiple tabs ----
+write_xlsx(
+  excel_sheets,
+  here("data","processed", paste0("df_osf_sia_wd_", date_suffix, ".xlsx"))
+)
+
+# save R object for Shiny
+saveRDS(
+  df_osf_sia_wd,
+  here("data", "processed", paste0("df_osf_sia_wd_shiny_", date_suffix, ".rds"))
+)
