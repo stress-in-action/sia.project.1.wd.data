@@ -48,6 +48,7 @@ sia.project.1.ws.data/
 | **technical_specs.xlsx** | Device specifications (battery life, connectivity, etc.) |
 | **data_access.xlsx** | Data storage type, raw data access, SDK/API availability |
 | **rvu_synthesis.xlsx** | Validity, reliability, and usability summaries |
+| **rvu_synthesis_detailed.xlsx** | RVU studies details |
 | **expert_scores.xlsx** | Expert-based scoring (e.g., short-term, long-term) |
 
 ---
@@ -56,7 +57,17 @@ sia.project.1.ws.data/
 
 | File | Description |
 |------|--------------|
-| **df_shiny_wi.csv / df_shiny_wi.xlsx** | Dataframe for Shiny
-| **df_osf_wi.csv / df_osf_wi.xlsx** | Dataframe for OSF
+| **df_wide_sia_wd.rds** | Dataframe in wide format 
+| **df_shiny_sia_wd_filter.rds** | Dataframe for filters Shiny
+| **df_shiny_sia_wd)info.rds** | Dataframe for additional char info Shiny
+| **df_osf_sia_wd.rds / df_osf_sia_wd.xlsx** | Dataframe for OSF
+| **ui_constants.rds** | Variables for Shiny UI
+| **glos.rds** | Glossary for Shiny sidebar
+| **df_codebook.rds** | Codebook for Filter outputs
+| **updates.rds** | Update section for SHiny homepage
+
+
+
+
 
 
