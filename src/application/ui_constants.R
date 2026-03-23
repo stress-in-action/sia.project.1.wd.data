@@ -1,3 +1,28 @@
+###############################################################################
+# Here you can add any pre-calculations or constants related to the variables that you want to store for use in the Shiny app. 
+# For example, if you want to calculate column widths for reactable based on the osf table, you can do it here and save the results 
+# in a list for easy access in the app.
+###############################################################################
+
+col_titles <- names(df_osf_sia_wd)
+
+# longest word logic
+words <- unlist(strsplit(col_titles, "[^A-Za-z]+"))
+words <- words[nzchar(words)]
+max_word_len <- max(nchar(words), na.rm = TRUE)
+
+# final column width (your tuned formula)
+reactable_col_width <- ceiling(max_word_len * 7 + 50)
+
+# store everything in a clean list
+ui_constants <- list(
+    col_width = reactable_col_width
+    #, other_constant = value
+  )
+
+# save
+saveRDS(ui_constants, here("data", "processed", paste0("ui_constants_", date_suffix, ".rds")))
+
 ########################################################################
 # Glossary (GLOS)
 #
@@ -398,7 +423,7 @@ glos <- list(
   )
 )
 
-saveRDS(glos, file = "glos.rds")
+saveRDS(glos, here("data", "processed", paste0("glos_", date_suffix, ".rds")))
 
 ########################################################################
 # Glossary Codebook Export (df_codebook)
@@ -523,6 +548,9 @@ updates <- tagList(
   )
 )
 
-saveRDS(updates, "updates.rds")
+saveRDS(updates, here("data", "processed", paste0("updates_", date_suffix, ".rds")))
+
+
+
 
 
