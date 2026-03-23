@@ -48,7 +48,7 @@ sia.project.1.ws.data/
 | **technical_specs.xlsx** | Device specifications (battery life, connectivity, etc.) |
 | **data_access.xlsx** | Data storage type, raw data access, SDK/API availability |
 | **rvu_synthesis.xlsx** | Validity, reliability, and usability summaries |
-| **rvu_synthesis_detailed.xlsx** | RVU studies details |
+| **rvu_synthesis_detailed.xlsx** | RVU study details |
 | **expert_scores.xlsx** | Expert-based scoring (e.g., short-term, long-term) |
 
 ---
