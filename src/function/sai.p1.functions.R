@@ -1,5 +1,5 @@
 ########################################################################
-# Helpers for human-readable sheet
+# Helpers for human-readable sheet#
 #
 # norm_key() function
 #   Convert free-text labels (e.g., spec_name, signal_name) into stable,
