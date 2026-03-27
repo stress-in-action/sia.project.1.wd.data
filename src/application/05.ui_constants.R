@@ -499,8 +499,8 @@ updates <- tagList(
     style = "padding-left: 15px;",
     
     tags$li(
-      strong(""),
-      ""
+      strong("April"),
+      " — 51 wearables included in the app."
     )
   ),
   
