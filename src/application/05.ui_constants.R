@@ -468,7 +468,7 @@ df_codebook <- map_dfr(names(glos), function(letter) {
   )
 })
 
-saveRDS(df_codebook, file = "df_codebook.rds")
+saveRDS(df_codebook, here("data", "processed", paste0("df_codebook_", date_suffix, ".rds")))
 
 ########################################################################
 # Recent Updates (updates)
@@ -499,8 +499,8 @@ updates <- tagList(
     style = "padding-left: 15px;",
     
     tags$li(
-      strong(""),
-      ""
+      strong("April"),
+      " — 51 wearables included in the app."
     )
   ),
   
