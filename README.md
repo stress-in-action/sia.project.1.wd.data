@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HugoGit39/sia.project.1.wi.data/refs/heads/main/www/siawd_relational_pipeline.png" alt="SIA Pipeline">
+  <img src="www/siawd_relational_pipeline.png" alt="SIA Pipeline">
 </p>
 
-# sia.project.1.wi.data
+# sia.project.1.wd.data
 
 Data-wrangling pipeline to build **Shiny-ready** and **OSF-ready** datasets for the SiA Wearable Database Shiny App.  
 The workflow follows best practices from _[Reproducible Science in Ecology & Evolution](https://ecorepsci.github.io/reproducible-science/)_ — emphasising tidy data, version control, scripted processing, and reproducible environments.
